@@ -1,31 +1,23 @@
 import React, { Component } from 'react';
 
 export default class Drumkit extends Component {
-  onKeyDown(e) {
-    console.log(e);
-  }
   componentDidMount() {
     window.addEventListener('keydown', e => {
       const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
       const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-      // console.log(key);
       key.classList.add('playing');
-      // console.log('audio is: ', audio);
       if (!audio) return;
       audio.currentTime = 0;
       audio.play();
     });
     function removeTransition(e) {
-      console.log(e);
       if (e.propertyName !== 'transform') return;
       this.classList.remove('playing');
     }
     const keys = document.querySelectorAll('.key');
     keys.forEach(key => {
-      console.log('adding eventListeners');
       key.addEventListener('transitionend', removeTransition);
     });
-
   }
   render() {
     return(
