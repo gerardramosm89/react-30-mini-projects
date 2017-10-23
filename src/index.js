@@ -34,12 +34,17 @@ const store = createStore(reducers, composeEnhancers(
 // Components
 import Home from './components/home';
 import Drumkit from './components/1-Drumkit';
+import CSSClock from './components/2-cssAndJavascriptClock';
+import FlexImagePanel from './components/3-flexPanelsImageGallery';
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <ConnectedRouter history={history}>    
         <div>
           <Switch>
+            <Route path="/cssclock" component={CSSClock} />
+            <Route path="/fleximagepanel" component={FlexImagePanel} />
             <Route path="/drumkit" component={Drumkit} />
             <Route path="/" component={Home} />
           </Switch>
