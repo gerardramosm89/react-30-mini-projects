@@ -33,13 +33,14 @@ const store = createStore(reducers, composeEnhancers(
 
 // Components
 import Home from './components/home';
-
+import Drumkit from './components/1-Drumkit';
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <ConnectedRouter history={history}>    
         <div>
           <Switch>
+            <Route path="/drumkit" component={Drumkit} />
             <Route path="/" component={Home} />
           </Switch>
         </div>
