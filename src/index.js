@@ -36,6 +36,7 @@ import Home from './components/home';
 import Drumkit from './components/1-Drumkit';
 import CSSClock from './components/2-cssAndJavascriptClock';
 import FlexImagePanel from './components/3-flexPanelsImageGallery';
+import AjaxTypeAhead from './components/4-ajaxTypeAhead';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -46,6 +47,7 @@ ReactDOM.render(
             <Route path="/cssclock" component={CSSClock} />
             <Route path="/fleximagepanel" component={FlexImagePanel} />
             <Route path="/drumkit" component={Drumkit} />
+            <Route path="/ajaxtypeahead" component={AjaxTypeAhead} />
             <Route path="/" component={Home} />
           </Switch>
         </div>
