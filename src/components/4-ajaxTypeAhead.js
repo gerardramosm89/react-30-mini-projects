@@ -40,7 +40,6 @@ export default class AjaxTypeAhead extends Component {
       const stateHl = match.state.replace(regex, `<span class="hl">${this.state.text}</span>`)
       return (
         <li key={match.population + Math.random(0,1000)}>
-          {/* <span className="name">{match.city}, {match.state}</span> */}
           <span className="name"><span dangerouslySetInnerHTML={{__html: cityHl}}/>, <span dangerouslySetInnerHTML={{__html: stateHl}}/></span>
           <span className="population">{match.population}</span>
         </li>

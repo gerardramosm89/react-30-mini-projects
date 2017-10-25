@@ -37,6 +37,7 @@ import Drumkit from './components/1-Drumkit';
 import CSSClock from './components/2-cssAndJavascriptClock';
 import FlexImagePanel from './components/3-flexPanelsImageGallery';
 import AjaxTypeAhead from './components/4-ajaxTypeAhead';
+import SlideInOnScroll from './components/5-slideInOnScroll';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -44,6 +45,7 @@ ReactDOM.render(
       <ConnectedRouter history={history}>    
         <div>
           <Switch>
+            <Route path="/slideinonscroll" component={SlideInOnScroll} />
             <Route path="/cssclock" component={CSSClock} />
             <Route path="/fleximagepanel" component={FlexImagePanel} />
             <Route path="/drumkit" component={Drumkit} />
